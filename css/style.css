@@ -11,6 +11,7 @@
 	"A Novel Concept"
 	CSS Styling
 	Dylan Huculak
+	Jeff Codling
 >>>>
 	(IF YOU ADD TO CODE, INCLUDE NAME HERE)
 	2014 **/
@@ -20,6 +21,8 @@ body {
 	font-size: 12px;
 	color: #777;
 	background: #404040;
+	margin: 0;
+	padding: 0;
 }
 
 h3 {
@@ -58,21 +61,27 @@ h3 {
 }
 
 #box { /* ID FOR ALL ELEMENTS WITHIN HEADER, CONTENT, FOOTER */
-
+	padding: 0;
+	margin: 0;
+	height: auto;
+	margin: 0 auto;
 }
 
 #contentBg {
-	min-height: 1051px;
-	min-width: 1000px;
-	max-height: 1051px;
+	//min-height: 1051px;
+	//min-width: 1000px;
+	//max-height: 1051px;
 	/* NO MAX WIDTH FOR BACKGROUND */
 	background: #f4f4f4;
 	background: url('../images/woodWall.jpg');
+	background-position: top left;
 	margin: 0;
+	padding: 0;
 }
 
 #content { 
 	color: black;
+	padding: 2em;
 }
 
 #footerBg {
