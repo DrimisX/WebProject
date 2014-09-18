@@ -1,0 +1,139 @@
+/** 
+	- - - - - - - - - - - -
+
+	Title: A Novel Concept
+
+	Version: 1.0
+
+	Date: September 2014
+
+	- - - - - - - - - - - -
+	"A Novel Concept"
+	CSS Styling
+	Dylan Huculak
+>>>>
+	(IF YOU ADD TO CODE, INCLUDE NAME HERE)
+	2014 **/
+	
+body {
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 12px;
+	color: #777;
+	background: #404040;
+}
+
+h3 {
+	color: #968477;
+}
+
+#bookMenu a, #links a {
+	color: #f4e9d4;
+	text-decoration: none;
+}
+
+#bookMenu {
+	height: 50px;
+	width: 595px;
+	float: right;
+	position: relative;
+	top: 120px;
+}
+
+#bookMenu ul {
+	display: block;
+}
+
+#bookMenu ul li {
+	font-family: 'MyriadProBoldCondensed';
+	font-size: 19px;
+	color: #d0ba9d;
+	line-height: 30px;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+	padding: 12px 14px;
+}
+
+#box { /* ID FOR ALL ELEMENTS WITHIN HEADER, CONTENT, FOOTER */
+
+}
+
+#contentBg {
+	min-height: 1051px;
+	min-width: 1000px;
+	max-height: 1051px;
+	/* NO MAX WIDTH FOR BACKGROUND */
+	background: #f4f4f4;
+	background: url('../images/woodWall.jpg');
+	margin: 0;
+}
+
+#content { 
+	color: black;
+}
+
+#footerBg {
+	height: 171px;
+	min-width: 1000px;
+	/* NO MAX WIDTH FOR BACKGROUND */
+	background: #35281F;
+	margin: 0;
+	padding: 0;
+}
+
+#footer {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#footerInfo { /* LEFT COLUMN */
+	display: block;
+	float: left;
+	width: 200px;
+	margin: 20px;
+}
+
+#footerService { /* CENTER COLUMN */
+	display: block;
+	padding: 20px 160px 5px 160px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+#footerAccount { /* RIGHT COLUMN */
+	display: block;
+	float: right;
+	width: 200px;
+	margin: 20px;
+}
+
+#headerBg {
+	height: 171px;
+	min-width: 1000px;
+	/* NO MAX WIDTH FOR BACKGROUND */
+	background: url('../images/headerBgRepeater.png');
+	margin: 0;
+}
+
+#header {
+	height: 171px;
+	max-width: 1000px;
+	background: url('../images/headerBg.jpg');
+	margin: 0 auto;
+}
+
+#links {
+	position: absolute;
+	right: 20px;
+	top: 92px;
+	font-size: 12px;
+	padding-right: 10px;
+}
+
+.footerList a {
+	color: #c3ab8d;
+	text-decoration: none;
+}
