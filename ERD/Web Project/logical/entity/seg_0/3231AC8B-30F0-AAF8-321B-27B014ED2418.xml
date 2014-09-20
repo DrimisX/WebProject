@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3231AC8B-30F0-AAF8-321B-27B014ED2418" name="Publisher">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:04 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D14D4442-04CC-1186-5E8F-A91AF750EA7B">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:41 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="name" id="F7A193B9-A31C-C1F5-C767-138668BAAD26">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:14 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="address" id="17A28DFB-D082-5407-6A92-8B1FB1DD9C87">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:18 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="city" id="4B9D1234-A891-0660-9B53-2C2E15832D85">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:21 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="postalcode" id="520B30E8-5ACA-03AA-3032-452CD068E982">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:41:24 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A36814A7-0CC6-6B22-FDFC-B62E530BB57B" name="Distributors PK">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:42:07 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D14D4442-04CC-1186-5E8F-A91AF750EA7B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

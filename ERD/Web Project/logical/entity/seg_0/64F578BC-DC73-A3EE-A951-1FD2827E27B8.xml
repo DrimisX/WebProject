@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="64F578BC-DC73-A3EE-A951-1FD2827E27B8" name="PaymentInfos">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:16:08 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="2095CD7F-988B-6904-36CA-FAD7005291F5">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:16:26 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="account_num" id="A6E347B9-035D-DFC4-99E0-E1432AF43353">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:16:36 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="account_name" id="CB3A870E-F134-A7D5-D8D1-86DA55E38F16">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 18:11:38 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="expiry_date" id="5BEAAA73-7C15-538A-4AE0-7A1D8EDA9A7F">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:17:50 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="id1" id="D88A2FAE-12BE-334B-7933-5D0A2A56E55C">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:18:59 UTC</createdTime>
+<generatorID>D37C8A2C-FF58-3147-E2F3-33313833DE55</generatorID>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<referedAttribute>B6038FC7-9FD0-E2D6-E7D4-96C08BF95B6F</referedAttribute>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E98D9BF-5F47-D8DA-478D-D3C8986E6AEB" name="PaymentInfos PK">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-12 18:16:43 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2095CD7F-988B-6904-36CA-FAD7005291F5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="38C9150C-2149-BDAD-E3CE-C26CC17184FE" name="Books" seqName="seg_0"/>
+   <object objectType="Entity" objectID="70D979D1-E49E-6BB8-10A2-61D18D3B7344" name="Catagorys" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0CD7A936-8E01-6137-0D4B-043B9A58C806" name="Clients" seqName="seg_0"/>
+   <object objectType="Entity" objectID="64F578BC-DC73-A3EE-A951-1FD2827E27B8" name="PaymentInfos" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3231AC8B-30F0-AAF8-321B-27B014ED2418" name="Publisher" seqName="seg_0"/>
+   <object objectType="Entity" objectID="275E71F7-C412-BF09-5FE3-BF68B9165630" name="Sales" seqName="seg_0"/>
+   <object objectType="Entity" objectID="AF742D73-A2AD-798B-8FD7-241626ED8AB7" name="WishLists" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0DDF0EBA-5BBB-7764-04BF-7DE548D4464E" name="creditcard" seqName="seg_0"/>
+   <object objectType="Entity" objectID="00412647-E7F1-CB62-7A0E-0F93B9B191CA" name="paypal" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D37C8A2C-FF58-3147-E2F3-33313833DE55" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="30FCE30E-B1DF-9E34-C486-6079395AC9D1" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="54167150-FAD4-2AE3-E759-5D0DC4BE22CE" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="23EE90A8-DD65-9453-CD5F-D242AA1DAE36" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D370DC06-2805-CB60-42DD-8CE279FC7587" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BEFA6C1E-6C4B-55B0-0CD9-753611D8C0F3" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="688C8A03-E3DB-473B-5ED4-20BBC8F3EBD5" name="Relation_9" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="E750EA3B-1B1B-6274-D2AE-3F27D812B2F5" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="86AE1D3A-F9A3-41AB-1A5E-929807362A61" name="Hierarchy_2" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

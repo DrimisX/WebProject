@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="70D979D1-E49E-6BB8-10A2-61D18D3B7344" name="Catagorys">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:46:58 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="48BA0C1B-D4FF-98F0-0792-784A9A81505D">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:47:11 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="description" id="F585BB47-27E9-DCDA-9491-E66506C86744">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:47:17 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="10F4437E-49D4-5481-BB3C-03B355106123" name="Catagorys PK">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:47:15 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>48BA0C1B-D4FF-98F0-0792-784A9A81505D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

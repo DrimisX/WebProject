@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AF742D73-A2AD-798B-8FD7-241626ED8AB7" name="WishLists">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:53:35 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D25A2C07-6FE4-00EE-4F8F-66C1104D4513">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:54:36 UTC</createdTime>
+<generatorID>BEFA6C1E-6C4B-55B0-0CD9-753611D8C0F3</generatorID>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<referedAttribute>B6038FC7-9FD0-E2D6-E7D4-96C08BF95B6F</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="client_id" id="301224FA-B7D4-0BB2-BB32-E62FEBF94102">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:53:47 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="book_id" id="7F6B4BBA-6122-BA6F-0DCA-C69F66BF6BE0">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:53:54 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="date_added" id="6301E024-73F9-6016-A519-DC25A40E2B57">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:54:01 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FFEB2095-EA98-093A-4739-B5C196DB294B" name="WishLists PK">
+<createdBy>jeff</createdBy>
+<createdTime>2014-09-19 17:53:53 UTC</createdTime>
+<ownerDesignName>Web Project</ownerDesignName>
+<engineerTo>
+<item key="E900F8DA-CE0F-6EAC-26AA-18D89710E830" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D25A2C07-6FE4-00EE-4F8F-66C1104D4513</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
