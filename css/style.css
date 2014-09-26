@@ -82,6 +82,7 @@ h3 {
 #content { 
 	color: black;
 	padding: 2em;
+	width: 100%;
 }
 
 #footerBg {
@@ -145,4 +146,70 @@ h3 {
 .footerList a {
 	color: #c3ab8d;
 	text-decoration: none;
+}
+
+/* CSS below added by Jeff Codling */
+
+.cf:before, .cf:after {
+	content: " ";
+}
+.cf {
+	clear: both;
+}
+.bookcontainer {
+	margin: 0 auto;
+	width: 1010px;
+	background: url("../images/bookshelf.png");
+	background-position: center 170px;
+	background-repeat: repeat-y;
+}
+.book {
+  display: inline-block;
+  margin: 10px 9px;
+  text-align: center;
+  width: 180px;
+  height: 270px;
+  background-color: rgba(255,255,255,0.5);
+	cursor: pointer;
+	color: rgba(0,0,0,0.6);
+/*
+  border: 1px solid black;
+*/
+}
+.book .coverart {
+  margin: 5px auto;
+  width: 120px;
+  height: 160px;
+  background: lightgreen;
+  border: 1px solid rgba(255,255,255,0);
+}
+.book .coverart:hover {
+	border: 1px solid rgba(255,255,255,0.8);
+}
+.book .title {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 17px;
+}
+.book .title:hover {
+	color: rgba(0,0,0,1);
+}
+.book .author {
+  font-size: 1em;
+}
+.book .author:hover {
+	color: rgba(255,255,255,0.8);
+}
+.book .ShortDescription {
+  margin-top: 5px;
+  padding: 0 10px;
+  font-size: .8em;
+  text-align: justify;
+/*
+	height: 0;
+	overflow: hidden;
+*/
+}
+.book .ShortDescription:hover {
+	color: white;
 }
