@@ -29,6 +29,10 @@ h3 {
 	color: #968477;
 }
 
+label {
+	cursor: default;
+}
+
 #bookMenu a, #links a {
 	color: #f4e9d4;
 	text-decoration: none;
@@ -135,6 +139,19 @@ h3 {
 	margin: 0 auto;
 }
 
+#header #welcome {
+	position: absolute;
+	top: 18px;
+	right: 245px;
+	width: 298px;
+	text-align: right;
+	color: #c7b79e;
+}
+
+#header #welcome a {
+	color: #fff;
+}
+
 #links {
 	position: absolute;
 	right: 20px;
@@ -148,6 +165,7 @@ h3 {
 	text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* CSS below added by Jeff Codling */
 
 .cf:before, .cf:after {
@@ -226,3 +244,91 @@ h3 {
 	color: white;
   transition: 0.5s;
 }
+=======
+.formStyleA {
+	display: block;
+	margin: 0;
+	outline: none;
+	box-shadow: 0 0 20px rgba(0,0,0,.3);
+	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #666
+}
+
+.formStyleA header, .formStyleA fieldset, .formStyleA footer {
+	display: block;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.formStyleA fieldset {
+	padding: 25px 30px 5px;
+	border: none;
+	background: rgba(255,255,255,.9);
+}
+
+.formStyleA footer {
+	padding: 15px 30px 25px;
+	border-top: 1px solid rgba(0,0,0,.1);
+	background: rgba(248,248,248,.9);
+}
+
+.formStyleA footer:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.formStyleA header {
+	padding: 20px 30px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	background: rgba(248,248,248,.9);
+	font-size: 25px;
+	font-weight: 300;
+	color: #232323;
+}
+
+.formStyleA section {
+	margin-bottom: 20px;
+}
+
+.formStyleA .button {
+	background-color: #2da5da;
+	opacity: 0.8;
+	margin-left: auto;
+	margin-right: auto;
+	transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+
+.formStyleA .col {
+	width: 50%;
+	float: left;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.formStyleA .row {
+	margin: 0 -15px;
+}
+
+.formStyleA .input, .formStyleA .select, .formStyleA .textarea, .formStyleA .radio, .formStyleA .checkbox, .formStyleA .toggle, .formStyleA .button {
+	position: relative;
+	display: block;
+}
+
+.formStyleA .input input, .formStyleA .select select, .formStyleA .textarea textarea {
+	border-color: #e5e5e5;
+	transition: border-color 0.3s;
+	-o-transition: border-color 0.3s;
+	-ms-transition: border-color 0.3s;
+	-moz-transition: border-color 0.3s;
+	-webkit-transition: border-color 0.3s;
+}
+>>>>>>> origin/master
