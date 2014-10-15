@@ -1,3 +1,14 @@
+// --------------------
+// 
+// Title: books.js
+// 
+// Version: 1.0
+// 
+// Date: October 10, 2014
+// 
+// By: Jeff Codling
+// --------------------
+
 $(document).ready(function() {
 	getData();
 });
@@ -6,6 +17,7 @@ function getData() {
 	var path='books.rpgle';
 	$.ajax({
 		url: path,
+		type: 'post',
 		dataType: 'json',
 		cache: false,
 		success: function(jsonData)
@@ -18,9 +30,9 @@ function getData() {
 				cache: false,
 				success: function(source) {
 					template=Handlebars.compile(source);
-					$("body").html(template(jsonData));
+					$(".bookcontainer").html(template(jsonData));
 				},
-				error: errorAlert
+				error: errorAlert2
 		});
 	}
 	,
@@ -29,5 +41,9 @@ function getData() {
 }
 
 function errorAlert(ehr,reason,ex) {
-	alert("Request was not successful: "+reason+" "+ex);
+	console.log(ehr);
+	alert("1st Request was not successful: "+reason+" "+ex);
+}
+function errorAlert2(ehr,reason,ex) {
+	alert("2nd Request was not successful: "+reason+" "+ex);
 }

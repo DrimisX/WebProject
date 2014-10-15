@@ -1,8 +1,29 @@
+<!-- 
+~~~~~~~~~~~~~~~~~~~~
+
+Title: books.tmpl - Books Handlebars template
+
+Version: 1.0
+
+Date: October 10, 2014
+
+By: Jeff Codling
+~~~~~~~~~~~~~~~~~~~~
+-->
 {{#rows}}
-	<div class="book">
-		<div class="coverart"><img src="{{BOOK_ID}}"></div>
-		<div class="title">{{BOOK_TITLE}}</div>
-		<div class="author">{{AUTHOR_LAST}}, {{AUTHOR_FIRST}} {{AUTHOR_MIDDLE}}</div>
-		<div class="ShortDescription">{{BOOK_PLOT}}</div>
-	</div>
+<div class="book">
+	<div class="coverart"><img src="images/{{BOOK_ID}}.jpg"></div>
+	<div class="title">{{BOOK_TITLE}}</div>
+	<div class="author">{{AUTHOR_LAST}}, {{AUTHOR_FIRST}} {{AUTHOR_MIDDLE}}</div>
+</div>
+<div class="book">
+	<div class="coverart"><img src="images/{{BOOK_ID}}.jpg"></div>
+	<div class="title">{{BOOK_TITLE}}</div>
+	<div class="author">{{AUTHOR_LAST}}, {{AUTHOR_FIRST}} {{AUTHOR_MIDDLE}}</div>
+</div>
+<div class="book">
+	<div class="coverart"><img src="images/{{BOOK_ID}}.jpg"></div>
+	<div class="title">{{BOOK_TITLE}}</div>
+	<div class="author">{{AUTHOR_LAST}}, {{AUTHOR_FIRST}} {{AUTHOR_MIDDLE}}</div>
+</div>
 {{/rows}}

@@ -181,9 +181,17 @@ label {
 	background-position: center 170px;
 	background-repeat: repeat-y;
 }
+.bookcontainer p {
+	text-align: center;
+	margin: 10px auto;
+	font-size: 2em;
+	color: rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 4px black;
+}
 .book {
-  display: inline-block;
-  margin: 10px 9px;
+  display: inline-table;
+  margin: 11px 9px;
   text-align: center;
   width: 180px;
   height: 270px;
@@ -203,6 +211,10 @@ label {
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0);
   transition: 0.5s;
+}
+.book img {
+	width: 120px;
+	height: 160px;
 }
 .book:hover .coverart {
 	box-shadow: 5px 5px 10px #000;
@@ -232,10 +244,13 @@ label {
 	text-shadow: 4px 4px 6px rgba(0,0,0,1);
   transition: 0.5s;
 }
+/* 
 .book .ShortDescription {
   margin-top: 5px;
   padding: 0 10px;
+  max-height: 63px;
   font-size: .8em;
+  overflow: hidden;
   text-align: justify;
   color: rgba(0,0,0,0);
   transition: 0.5s;
@@ -244,7 +259,106 @@ label {
 	color: white;
   transition: 0.5s;
 }
-=======
+ */
+/* Spinner CSS */
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* ======= */
 .formStyleA {
 	display: block;
 	margin: 0;
