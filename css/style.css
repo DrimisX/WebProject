@@ -260,6 +260,54 @@ label {
   transition: 0.5s;
 }
  */
+
+/* Full book display CSS */
+.fullbook {
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 400px;
+}
+.fullbook .coverart, .fullbook .coverart img {
+  max-height: 400px;
+  background: rgba(0, 0, 0, 0.3);
+  float: left;
+  margin-right: 20px;
+}
+.id {
+	margin-top: 10px;
+}
+.title {
+	margin: 15px 0;
+	font-weight: bold;
+	font-size: 28px;
+}
+.fullbook .first, .fullbook .middle, .fullbook .last {
+  font-size: 18px;
+}
+.fullbook .plot {
+  margin: 20px 0;
+}
+
+.backbutton {
+  clear: both;
+  display: inline-block;
+  margin: 20px 45%;
+  padding: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.7);
+	border: 1px solid rgba(255,255,255,0);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.backbutton:hover {
+	color: white;
+	background: rgba(0,0,0,1);
+	border: 1px solid rgba(255,255,255,1);
+}
+
 /* Spinner CSS */
 
 .spinner {

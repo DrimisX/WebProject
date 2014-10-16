@@ -9,7 +9,7 @@ D SqlCmd          S           8192    varying
 SetContentType('application/json; charset=utf-8');
 
 sqlCmd = ('                                  +
-  SELECT book_id, book_title,                +
+  SELECT book_id, book_title, book_plot,     +
     author_last, author_first, author_middle +
     FROM books                               +
     JOIN book_authors USING(book_id)         +
