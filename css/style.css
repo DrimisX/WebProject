@@ -23,7 +23,6 @@ body {
 	background: #404040;
 	margin: 0;
 	padding: 0;
-	min-width: 600px;
 }
 
 h3 {
@@ -70,13 +69,10 @@ label {
 	margin: 0;
 	height: auto;
 	margin: 0 auto;
+	min-width: 600px;
 }
 
 #contentBg {
-	//min-height: 1051px;
-	//min-width: 1000px;
-	//max-height: 1051px;
-	/* NO MAX WIDTH FOR BACKGROUND */
 	background: #f4f4f4;
 	background: url('../images/woodWall.jpg');
 	background-position: top left;
@@ -180,15 +176,19 @@ label {
 
 /***** Sorting option box form style *****/
 form[name='sortby'] {
+	font-size: 12px;
 	padding: 5px;
-	margin-left: 20px;
+	margin: 0 0 0 20px;
 	color: white;
 	display: inline-block;
+/* 
+	height: 30px;
 	vertical-align: center;
 	text-align: center;
 	background: rgba(0,0,0,0.7);
 	border: 1px solid white;
 	border-radius: 10px;
+ */
 }
 
 /***** Book display style *****/
@@ -200,9 +200,10 @@ form[name='sortby'] {
 	padding: 5px 15px;
 	font-size: 24px;
 	color: white;
+	display: inline-block;
 	background: rgba(0,0,0,0.7);
 	border: 1px solid white;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 .bookcontainer {
 	margin: 0 auto;
@@ -221,7 +222,7 @@ form[name='sortby'] {
 }
 .book {
   display: inline-table;
-  margin: 11px 9px;
+  margin: 10px 9px 11px;
   text-align: center;
   width: 180px;
   height: 270px;
@@ -308,7 +309,11 @@ form[name='sortby'] {
 }
 .paging a {
 	color: white;
+	text-decoration: none;
 	text-decoration: strong;
+}
+.paging a:hover {
+	color: rgb(0,255,0);
 }
 
 /* Full book display CSS */

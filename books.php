@@ -36,11 +36,6 @@ define("DATABASENAME","team01project");
 define("USR","team01project");
 define("PASS","Pass4team01!");
 
-$servername = constant('SERVERNAME');
-$username = constant('USR');
-$password = constant('PASS');
-$databaseName = constant('DATABASENAME');
-
 // *********** PHP Settings Variable List
 $timelimit = 300;			// Amount of time in seconds that a client will stay logged in without doing something. (300 = 5 mins.)
 $itemsPerPage = 20;		// Number of items to display per page
@@ -213,6 +208,50 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 	</form>
 	<?php
 }
+// Function Display Paging
+function DisplayPaging($page,$totalrows) {
+	echo "<div class='paging'><span>";
+	if($page==0) {
+	echo "first";
+	} else {
+		echo "<a href=\"?page=0";
+		if(isset($_REQUEST['sort'])) {
+			echo "&sort=".$_REQUEST['sort'];
+		}
+		echo "\">first</a>";
+	}
+	echo " | ";
+	if($page == 0) {
+		echo "X";
+	} else {
+		echo "<a href=\"?page=".($page-1);
+		if(isset($_REQUEST['sort'])) {
+			echo "&sort=".$_REQUEST['sort'];
+		}
+		echo "\">".$page."</a>";
+	}
+	echo " | ".($page+1)." | ";
+	if(($page+1) >= $totalrows) {
+		echo "X";
+	}else {
+		echo "<a href=\"?page=".($page+1);
+		if(isset($_REQUEST['sort'])) {
+			echo "&sort=".$_REQUEST['sort'];
+		}
+		echo "\">".($page+2)."</a>";
+	}
+	echo " | ";
+	if(($page+1)>=$totalrows) {
+		echo "last";
+	} else {
+		echo "<a href=\"?page=".($totalrows-1);
+		if(isset($_REQUEST['sort'])) {
+			echo "&sort=".$_REQUEST['sort'];
+		}
+		echo "\">last</a>";
+	}
+	echo "</span></div>\n";
+}
 ?>
   <body>
 	<div id="box">
@@ -366,24 +405,34 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 			
 					<?php
 // *********** PHP Display Books ***********
+					$servername = constant('SERVERNAME');
+					$username = constant('USR');
+					$password = constant('PASS');
+					$databaseName = constant('DATABASENAME');
+
 					$con = mysqli_connect($servername, $username, $password, $databaseName);
 					if($con->connect_error) {
 						die("Connection failed: " . $con->connect_error);
 					}
-					$result = mysqli_query($con, "SELECT count(book_id) FROM books");		// Get the total number of items
+					$result = mysqli_query($con, "SELECT count(*) FROM books");		// Get the total number of items
 					if(! $result ) {
 						die("Could not get count of books.");
 					}
 					$row = mysqli_fetch_array($result, MYSQL_NUM);								// Do the query
 					
-					$totalrows = $row[0]/$itemsPerPage;														// Calculate number of pages
-
+					$totalItems = $row[0];
+					$totalrows = $totalItems/$itemsPerPage;														// Calculate number of pages
+					
 					if(isset($_REQUEST['page'])) {					// If a page is specified set accordingly
 						$page = $_REQUEST['page'];
 					} else {
 						$page = 0;
 					}
+
+					$totalOnPage = $totalItems-($page*$itemsPerPage);
 					
+// 					echo "<hr>:totalrows: ".$totalrows." :Total Rows: ".$row[0]." :Page: ".$page." :totalOnPage: ".$totalOnPage."<hr>";
+
 					// Build the SQL statement
 					// SQL to get the current page of items with needed joins for authors
 					$stmt = "SELECT b.book_id,book_title,book_plot,book_price,author_last,author_first,author_middle FROM books b";
@@ -398,7 +447,7 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 					} else {																// If all items selected use the LIMIT statement to make pages
 						$limitclause = " LIMIT ".($page*$itemsPerPage).", ".$itemsPerPage;
 					}
-					if(isset($_REQUEST['sortsubmit']) && isset($_REQUEST['sort'])) {		// Add ORDER BY if sorting is selected
+					if(isset($_REQUEST['sort'])) {		// Add ORDER BY if sorting is selected
 						$orderbyclause = " ORDER BY ";
 						switch ($_REQUEST['sort']) {
 							case "price" :
@@ -413,6 +462,9 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 							default :
 								$orderbyclause.="book_title";
 						}
+					} else {
+						$orderbyclause = " ORDER BY ";
+						$orderbyclause.="book_title";
 					}
 					
 					$stmt.= $whereclause.$orderbyclause.$limitclause;		// build appropriate SQL statement in proper order
@@ -424,7 +476,13 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 					if(isset($_REQUEST['id'])){							// If a single item is selected show only one item
 						if($row = mysqli_fetch_array($result)) {
 							echo "<div class='fullbook'>";
-							echo "<img class='coverart' src='images/".$row['book_id'].".jpg'>";
+							echo "<img class='coverart' src='images/";
+							if(file_exists("images/".$row['book_id'])) {
+								echo $row['book_id'];
+							} else {
+								echo "coverart";
+							}
+							echo ".jpg'>";
 							echo "<div class='id'>Book ID: ".$row['book_id']."</div>";
 							echo "<div class='title'>Title: ".$row['book_title']."</div>";
 							echo "<div class='first'>Author: ".$row['author_last'].", ".$row['author_first']." ".$row['author_middle']."</div>";
@@ -439,11 +497,11 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 						}
 	
 					} else {																// Else show the page of items
-						echo "<div class='booklisttitle'><span>Available Books</span>";
-						echo "<form name=\"sortby\" action=\"".$_SERVER['PHP_SELF']."\" method=\"post\">";	// Sorting option list
-						echo "Sort by: <select name=\"sort\">";
-						echo "<option value=\"title\" selected";
-						if(isset($_REQUEST['sortsubmit'])) {
+						echo "<div class='booklisttitle'><span>Available Books";
+						echo "<form name=\"sortby\" action=\"".$_SERVER['PHP_SELF']."\" method=\"get\">";	// Sorting option list
+						echo "Sorted by <select name=\"sort\" onchange=\"this.form.submit()\">";
+						echo "<option value=\"title\"";
+						if(isset($_REQUEST['sort'])) {
 							if($_REQUEST['sort'] == 'title') {
 								echo " selected";
 							}
@@ -452,50 +510,43 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 						}
 						echo ">Title</option>";
 						echo "<option value=\"price\"";
-						if(isset($_REQUEST['sortsubmit'])) {
+						if(isset($_REQUEST['sort'])) {
 							if($_REQUEST['sort'] == 'price') {
 								echo " selected";
 							}
 						}
 						echo ">Price</option>";
 						echo "<option value=\"authorlast\"";
-						if(isset($_REQUEST['sortsubmit'])) {
+						if(isset($_REQUEST['sort'])) {
 							if($_REQUEST['sort'] == 'authorlast') {
 								echo " selected";
 							}
 						}
 						echo ">Author Last Name</option>";
 						echo "<option value=\"authorfirst\"";
-						if(isset($_REQUEST['sortsubmit'])) {
+						if(isset($_REQUEST['sort'])) {
 							if($_REQUEST['sort'] == 'authorfirst') {
 								echo " selected";
 							}
 						}
 						echo ">Author First Name</option>";
 						echo "</select> ";
-						echo "<input type=\"submit\" name=\"sortsubmit\" value=\"Sort\">";
-						echo "</form>";
+						echo "</form></span>";
 						echo "</div>";												// End of sorting options
 						echo "<div class='bookcontainer'>";
-						if($totalrows>10) {										// If the items will go off screen add pagination to the top
-							echo "<div class='paging'><span>";
-							if($page == 0) {
-								echo "1";
-							} else {
-								echo "<a href='?page=".($page-1)."'>".$page."</a>";
-							}
-							echo " | ".($page+1)." | ";
-							if((($page+1)*$itemsPerPage) > $totalrows) {
-								echo "end";
-							}else {
-								echo "<a href='?page=".($page+2)."'>".($page+2)."</a>";
-							}
-							echo "</span></div>\n";
+						if($totalOnPage>10) {										// If the items will go off screen add pagination to the top
+							DisplayPaging($page,$totalrows);
 						}
 						while($row = mysqli_fetch_array($result)) {
 							echo "<div class='book'>";
 							echo "<a href='books.php?id=".$row['book_id']."'>";
-							echo "<div class='coverart'><img src='images/".$row['book_id'].".jpg'></div>\n";
+							echo "<div class='coverart'><img src='images/";
+							if(file_exists("images/".$row['book_id'].".jpg")) {
+								echo $row['book_id'];
+							} else {
+								echo "coverart";
+							}
+							echo ".jpg'></div>\n";
 							echo "<div class='title'>".$row['book_title']."</div>\n";
 							echo "<div class='author'>".$row['author_first']." ";
 							echo strtoupper(substr($row['author_middle'], 0, 1));
@@ -503,19 +554,7 @@ function DisplayLoginForm($dialog,$title,$username,$password,$buttonname,$button
 							echo "</a></div>\n";
 						}
 						echo "</div>\n";
-						echo "<div class='paging'><span>";			// ****** Pagination
-						if($page == 0) {
-							echo "start";
-						} else {
-							echo "<a href='?page=".($page-1)."'>".$page."</a>";
-						}
-						echo " | ".($page+1)." | ";
-						if((($page+1)*$itemsPerPage) > $totalrows) {
-							echo "end";
-						}else {
-							echo "<a href='?page=".($page+2)."'>".($page+2)."</a>";
-						}
-						echo "</span></div>\n";
+						DisplayPaging($page,$totalrows);
 					}
 					$con->close();
 
