@@ -256,7 +256,7 @@ function DisplayPaging($page,$totalrows) {
   <body>
 	<div id="box">
 		<div id="headerBg">
-			<div id="header">
+			<div id="header"><img src="images/headerBgRight.jpg" align="right">
 				<div id="links" class="logintop"> <!-- Login system by Jeff Codling -->
 				
 					<?php
@@ -563,7 +563,6 @@ function DisplayPaging($page,$totalrows) {
 				</div> <!-- End bookshelf grid addition by Jeff Codling -->
 				
 			</div>
-		</div>
 		<div id="footerBg">
 			<div id="footer">
 				<div id="footerInfo"> <!--LEFT COLUMN-->
